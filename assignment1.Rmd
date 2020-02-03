@@ -14,8 +14,9 @@ knitr::opts_chunk$set(echo = TRUE)
 In this assignment you will work with the individual level data from wave 8 of the Understanding Society survey. First, you need to open the data set. Please complete the code below.
 
 ```{r}
+setwd("C:/Users/conno/Downloads")
 library(tidyverse)
-Data <- read.csv(file.choose (), sep = "\t")
+Data <- read_tsv("DA III Data/UKDA-6614-tab/tab/ukhls_w8/h_indresp.tab")
 ```
 
 Now you have got your data frame stored as Data. 
