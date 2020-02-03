@@ -10,12 +10,13 @@ wave 8 of the Understanding Society survey. First, you need to open the
 data set. Please complete the code below.
 
 ``` r
+setwd("C:/Users/conno/Downloads")
 library(tidyverse)
 ```
 
     ## Warning: package 'tidyverse' was built under R version 3.5.3
 
-    ## -- Attaching packages ----------------- tidyverse 1.3.0 --
+    ## -- Attaching packages ------ tidyverse 1.3.0 --
 
     ## v ggplot2 3.2.1     v purrr   0.3.3
     ## v tibble  2.1.3     v dplyr   0.8.3
@@ -38,13 +39,20 @@ library(tidyverse)
 
     ## Warning: package 'forcats' was built under R version 3.5.3
 
-    ## -- Conflicts -------------------- tidyverse_conflicts() --
+    ## -- Conflicts --------- tidyverse_conflicts() --
     ## x dplyr::filter() masks stats::filter()
     ## x dplyr::lag()    masks stats::lag()
 
 ``` r
-Data <- read.csv(file.choose (), sep = "\t")
+Data <- read_tsv("DA III Data/UKDA-6614-tab/tab/ukhls_w8/h_indresp.tab")
 ```
+
+    ## Parsed with column specification:
+    ## cols(
+    ##   .default = col_double()
+    ## )
+
+    ## See spec(...) for full column specifications.
 
 Now you have got your data frame stored as Data.
 
